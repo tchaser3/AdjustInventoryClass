@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BCF375E-21CB-4B36-BB9B-6383231971EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdjustInventoryDLL</RootNamespace>
+    <AssemblyName>AdjustInventoryDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdjustInventoryClass.cs" />
+    <Compile Include="AdjustInventoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdjustInventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAdjustInventoryByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAdjustInventoryByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAdjustInventoryByPartIDWarehouseIDEmployeeIDDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAdjustInventoryByPartIDWarehouseIDEmployeeIDDateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertAdjustInventoryRecordData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertAdjustInventoryRecordData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AdjustInventoryDataSet.xsc">
+      <DependentUpon>AdjustInventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AdjustInventoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdjustInventoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AdjustInventoryDataSet.xss">
+      <DependentUpon>AdjustInventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="app.config" />
+    <None Include="FindAdjustInventoryByDateRangeDataSet.xsc">
+      <DependentUpon>FindAdjustInventoryByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAdjustInventoryByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAdjustInventoryByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAdjustInventoryByDateRangeDataSet.xss">
+      <DependentUpon>FindAdjustInventoryByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAdjustInventoryByPartIDWarehouseIDEmployeeIDDateDataSet.xsc">
+      <DependentUpon>FindAdjustInventoryByPartIDWarehouseIDEmployeeIDDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAdjustInventoryByPartIDWarehouseIDEmployeeIDDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAdjustInventoryByPartIDWarehouseIDEmployeeIDDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAdjustInventoryByPartIDWarehouseIDEmployeeIDDateDataSet.xss">
+      <DependentUpon>FindAdjustInventoryByPartIDWarehouseIDEmployeeIDDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAdjustInventoryRecordData.xsc">
+      <DependentUpon>InsertAdjustInventoryRecordData.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAdjustInventoryRecordData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertAdjustInventoryRecordData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertAdjustInventoryRecordData.xss">
+      <DependentUpon>InsertAdjustInventoryRecordData.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
